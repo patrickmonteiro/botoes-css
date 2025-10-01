@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Arial", sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
     display: flex;
@@ -59,7 +59,7 @@ h1 {
 }
 
 .slider:before {
-    content: '';
+    content: "";
     position: absolute;
     height: 50px;
     width: 50px;
@@ -127,7 +127,9 @@ input:checked ~ .labels .label-on {
 /* Hover effects */
 .toggle:hover .slider {
     transform: scale(1.02);
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow:
+        inset 0 2px 4px rgba(0, 0, 0, 0.2),
+        0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .toggle:hover .slider:before {
@@ -233,6 +235,187 @@ input:focus + .slider {
     flex-direction: row;
 }
 
+/* Additional Button Colors */
+.btn-warning {
+    background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+    color: white;
+}
+
+.btn-dark {
+    background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+    color: white;
+}
+
+.btn-gradient {
+    background: linear-gradient(135deg, #ff6ec4 0%, #7873f5 50%, #4fc3f7 100%);
+    color: white;
+}
+
+.btn-purple {
+    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+    color: white;
+}
+
+/* Outline Buttons */
+.btn-outline {
+    background: transparent;
+    border: 2px solid;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    color: white;
+}
+
+.btn-outline-primary {
+    color: #667eea;
+    border-color: #667eea;
+}
+
+.btn-outline-primary:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-color: #667eea;
+}
+
+.btn-outline-success {
+    color: #2ecc71;
+    border-color: #2ecc71;
+}
+
+.btn-outline-success:hover {
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    border-color: #2ecc71;
+}
+
+.btn-outline-danger {
+    color: #e74c3c;
+    border-color: #e74c3c;
+}
+
+.btn-outline-danger:hover {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    border-color: #e74c3c;
+}
+
+/* Rounded Buttons */
+.btn-rounded {
+    border-radius: 50px;
+    padding: 14px 32px;
+}
+
+/* Shadow Buttons */
+.btn-shadow {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.btn-shadow:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+.btn-shadow:active {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
+}
+
+/* Large Buttons */
+.btn-large {
+    padding: 18px 36px;
+    font-size: 18px;
+    border-radius: 12px;
+}
+
+.btn-large i {
+    font-size: 24px;
+}
+
+/* Animated Buttons */
+.btn-animated {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Pulse Animation */
+.btn-pulse {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 107, 107, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 107, 0);
+    }
+}
+
+/* Shake Animation */
+.btn-shake {
+    background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+    color: white;
+}
+
+.btn-shake:hover {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
+}
+
+/* Slide Animation */
+.btn-slide {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-slide i {
+    transition: transform 0.3s ease;
+}
+
+.btn-slide:hover i {
+    transform: translateX(5px);
+}
+
+.btn-slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.3s ease;
+}
+
+.btn-slide:hover::before {
+    left: 100%;
+}
+
 /* Responsive design */
 @media (max-width: 480px) {
     .container {
@@ -261,5 +444,14 @@ input:focus + .slider {
     .btn {
         font-size: 14px;
         padding: 10px 20px;
+    }
+
+    .btn-large {
+        padding: 14px 28px;
+        font-size: 16px;
+    }
+
+    .btn-rounded {
+        padding: 12px 24px;
     }
 }
