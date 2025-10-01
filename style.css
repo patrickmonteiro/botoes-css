@@ -140,28 +140,126 @@ input:focus + .slider {
     outline-offset: 2px;
 }
 
+/* Icon Buttons Section */
+.icon-buttons-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.icon-buttons-section h2 {
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.icon-buttons-section h3 {
+    color: #555;
+    margin: 1.5rem 0 1rem;
+    font-size: 1.1rem;
+}
+
+.button-group {
+    margin-bottom: 2rem;
+}
+
+/* Base Button Styles */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    margin: 8px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn i {
+    font-size: 18px;
+}
+
+/* Button Colors */
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    color: white;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: white;
+}
+
+.btn-info {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+}
+
+/* Icon Only Buttons */
+.btn-icon {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border-radius: 50%;
+    justify-content: center;
+}
+
+.btn-icon i {
+    margin: 0;
+}
+
+/* Icon Right Buttons */
+.btn-icon-right {
+    flex-direction: row;
+}
+
 /* Responsive design */
 @media (max-width: 480px) {
     .container {
         margin: 1rem;
         padding: 1.5rem;
     }
-    
+
     h1 {
         font-size: 2rem;
     }
-    
+
     .toggle {
         width: 160px;
         height: 50px;
     }
-    
+
     .slider:before {
         height: 40px;
         width: 40px;
     }
-    
+
     input:checked + .slider:before {
         transform: translateX(110px);
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px 20px;
     }
 }
