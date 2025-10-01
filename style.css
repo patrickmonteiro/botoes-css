@@ -215,6 +215,24 @@ input:focus + .slider {
     color: white;
 }
 
+/* Async button loading state */
+#async-btn .loader {
+    display: none;
+}
+
+#async-btn.is-loading {
+    pointer-events: none;
+    opacity: 0.85;
+}
+
+#async-btn.is-loading .label {
+    visibility: hidden;
+}
+
+#async-btn.is-loading .loader {
+    display: inline-flex;
+}
+
 /* Icon Only Buttons */
 .btn-icon {
     width: 50px;
